@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>DNC Weather</title>
+
+
+
+</head>
+<body>
+    <div class="header">
+
+        
+            <p id="weather"> DncWeather </p>
+            
+            <p id="endereco"> Endereços </p>
+            
+            <p id="previsao"> Previsão do tempo </p>
+        
+    </div>
+
+    <div class="corpo">
+        <div id="teto">
+            <p id="texto1"> Descubra Mais com Precisão:<br>
+                            Previsões do Tempo e endereços<br>
+                            em tempo real.
+            </p>
+
+            <div id="img">
+                <img src="./imagens/nuvem.svg" alt="ERROR">
+            </div>
+
+
+        </div>
+
+
+        <div class="quadro">
+
+                <br>
+                <p id="nome" class="text"> Primeiro Nome: </p>
+                <input type="text" class="form-control" id="inputName" placeholder=" Insira seu primeiro nome ">
+                <br>
+            
+            
+                <p class="text"> E-mail: </p>
+                <input type="email" class="form-control" id="inputEmail" placeholder=" Insira seu e-mail ">
+                <br>
+
+            
+                <p class="text"> Digite o CEP:</p>
+                <input type="number" class="form-control" id="inputCep" placeholder=" Insira o CEP ">
+                <br>
+
+            
+                <p class="text"> Digite a latitude e longitude para saber a previsão: </p>
+                <input type="text" class="latlon" id="lati" placeholder=" Latitude ">
+                <input type="text" class="latlon" id="long" placeholder=" Longitude ">
+                <br>
+
+                <button class="button" type="button" onclick="getAddressByCep(inputCep), getPrevisao(lati , long)"> Acessar </button>
+                
+            
+        </div>
+
+            <div id="buscacep">
+                        <p id="texto2">
+                            Resultados da busca por CEP:
+                        </p>
+
+                        <div id="img-cep">
+                            <img src="./imagens/cep.svg" alt="ERROR">
+                        </div>
+            </div>
+
+            <div class="result">
+                <div class="text-blue">
+                    <p id="logra">
+                        Logradouro/Nome
+                    </p>
+
+                    <p id="bairro">
+                        Bairro/Distrito
+                    </p>
+
+                    <p id="local">
+                        Localidade/UF
+                    </p>    
+                </div>
+            </div>
+
+            <div class="result1">
+                <div class="text-white">
+                    <p readonly id="rua"></p>
+
+                    <p readonly id="bairro-distrito"></p>
+
+                    <p readonly id="localidade"></p>
+                        
+                </div>
+            </div>
+
+
+                <div id="temporegiao">
+                    <p id="texto3"> Previsão do tempo na região:
+                    </p>
+
+                    <div id="img-nuv">
+                        <img src="./imagens/nuvem2.svg" alt="ERROR">
+                    </div>
+                </div>
+
+              
+                <div class="temp2">
+                    <p id="temp">
+                        
+                    </p>
+                </div>
+
+                <footer>
+                    <div class="footer">
+                    
+                        <p id="final">
+                            Termos de uso | Política de privacidade
+                        </p>
+
+                       
+                    </div>
+
+                </footer>
+
+            
+
+    </div>
+    
+</body>
+</html>
